@@ -145,7 +145,7 @@ python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-unit
 
 Example 2: (`amplitude` mode for the `dd-state-hybrid` backend):
 ```
-python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-state-hybrdi mode=amplitude
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-state-hybrid mode=amplitude
 ```
 
 List of backends and their possible modes:
@@ -163,9 +163,26 @@ List of backends and their possible modes:
 | `dd-qasm-path`    | `alternating`        |
 | `dd-qasm-path`    | `cotengra`           |
 
+
+### Shot Count Option (`shot=<no. of shots>`)
+
+For MQT DDSim and Qiskit Aer qasm simulators (e.g. `dd-qasm`, `aer-qasm`), the number of shots can be specified using the `shot=<no. of shots>` option. The default shot count is 1.
+
+Command Format:
+```
+python3 run-qasm.py <QASM file> back=<some qasm backend> shot=<no. of shots>
+```
+
+Example: (simulation uses `dd-qasm` backend with 1024 shots): 
+```
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-qasm shot=1024
+```
+
+### Log Option (`logs=<log no.>`)
+
+### Testing Option (`test=<test type>`)
+
 ### Instructions Option (`--help`)
-
-
 
 
 ## How to Use `run-mqt-bench.py`
