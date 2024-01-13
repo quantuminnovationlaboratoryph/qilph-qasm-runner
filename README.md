@@ -133,6 +133,14 @@ python3 run-qasm.py back=aer-state MQTBench/grover-noancilla_indep_qiskit_010.qa
 
 The `mode` option is specific to MQT DDSim backends. They refer to particlular simulation methods used by some DDSim backends.
 
+Command Format:
+```
+python3 run-qasm.py <QASM file> back=<backend> mode=<mode>
+```
+
+Example 1: 
+
+
 ### Instructions Option (`--help`)
 
 
