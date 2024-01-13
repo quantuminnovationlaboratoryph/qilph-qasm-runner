@@ -115,17 +115,19 @@ Example 3: (specifying the backend as `aer-state`):
 python3 run-qasm.py back=aer-state MQTBench/grover-noancilla_indep_qiskit_010.qasm
 ```
 
-Backends:
-| Backend | Description |
-|---------|-------------|
-|`dd-qasm`| MQT DDSim's `qasm_simulator`|
-|`dd-state` | MQT DDSim's `statevector_simulator` |
-|`dd-state-hybrid` | MQT DDSim's `statevector_simulator`|
-|`dd-unitary` | MQT DDSim's `unitary_simulator`|
-|`aer-qasm`   | Qiskit Aer's `qasm_simulator`|
-|`aer-state` | Qiskit Aer's `statevector_simulator` |
-|`projq-qasm`  | ProjectQ's simulator (without state vector output)|
-|`projq-state` | ProjectQ's simulator (with state vector output)|
+| Backend          | Description                                       |
+|------------------|---------------------------------------------------|
+|`dd-qasm`         | MQT DDSim's `qasm_simulator`                      |
+|`dd-qasm-path`    | MQT DDSim's `path_qasm_simulator`                 |
+|`dd-qasm-hybrid`  | MQT DDSim's `hybrid_qasm_simulator`               |
+|`dd-state`        | MQT DDSim's `statevector_simulator`               |
+|`dd-state-hybrid` | MQT DDSim's `hybrid_statevector_simulator`        |
+|`dd-unitary`      | MQT DDSim's `unitary_simulator`                   |
+|`aer-qasm`        | Qiskit Aer's `qasm_simulator`                     |
+|`aer-state`       | Qiskit Aer's `statevector_simulator`              |
+|`projq-qasm`      | ProjectQ's simulator (without state vector output)|
+|`projq-state`     | ProjectQ's simulator (with state vector output)   |
+
 
 ### Simulation Mode/Method Option (`mode=<mode>`)
 
