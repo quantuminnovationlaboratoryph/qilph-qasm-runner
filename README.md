@@ -21,7 +21,7 @@ Install the Python packages using `pip`:
 pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qiskit qiskit-aer qiskit-terra quimb
 ```
 
-## Basic Usage
+## How to Use `run-qasm.py`.
 
 You can run simulation by provide the script a QASM file parameter. For example:
 
