@@ -21,13 +21,19 @@ Install the Python packages using `pip`:
 pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qiskit qiskit-aer qiskit-terra quimb
 ```
 
-## How to Use `run-qasm.py`.
+## How to Use `run-qasm.py`
+
+
 
 You can run simulation by provide the script a QASM file parameter. For example:
 
 ```
 python3 run-ddsim.py MQTBench/ghz_indep_qiskit_050.qasm 
 ```
+
+## How to Use `run-mqt-bench.py`
+
+The `run-mqt-bench.py` script is used for running 
 
 ## Advanced Usage
 
