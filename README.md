@@ -116,13 +116,13 @@ python3 run-qasm.py back=aer-state MQTBench/grover-noancilla_indep_qiskit_010.qa
 ```
 
 Backends:
-- `dd-qasm`
-- `dd-state`
-- `dd-unitary`
-- `aer-qasm`
-- `aer-state`
-- `projq-qasm`
-- `projq-state`
+- `dd-qasm` - MQT DDSim's `qasm_simulator`
+- `dd-state` - MQT DDSim's `statevector_simulator`
+- `dd-unitary` - MQT DDSim's `unitary_simulator`
+- `aer-qasm` - Qiskit Aer's `qasm_simulator`
+- `aer-state` - Qiskit Aer's `statevector_simulator`
+- `projq-qasm` - ProjectQ's simulator (without state vector output)
+- `projq-state` - ProjectQ's simulator (with state vector output)
 
 
 ### Instructions Option (`--help`)
