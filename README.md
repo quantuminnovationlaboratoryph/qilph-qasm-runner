@@ -1,6 +1,10 @@
 # QASM Runner
 
-A python script for simulating a quantum circuit, given as a QASM file, using MQT DDSim quantum circuit simulator.
+The QASM runner script, `run-qasm.py`, takes a quantum circuit in the QASM file format as input and simulates it using any of the following simulators:
+- Qiskit Aer
+- MQT DDSim
+- ProjectQ
+
 
 ## Prerequisites 
 
@@ -22,9 +26,9 @@ A python script for simulating a quantum circuit, given as a QASM file, using MQ
 ### Install Required Packages
 
 
-Installation Command:
+To install all required packages, use the following command:
 ```
-:pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qiskit qiskit-aer qiskit-terra quimb
+pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qiskit qiskit-aer qiskit-terra quimb
 ```
 
 
