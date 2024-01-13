@@ -24,6 +24,17 @@ pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qisk
 ## How to Use `run-qasm.py`
 
 
+Format:
+```
+python3 run-qasm.py <QASM file>
+```
+
+Example:
+```
+python3 run-qasm.py <QASM file>
+```
+
+
 
 You can run simulation by provide the script a QASM file parameter. For example:
 
@@ -34,6 +45,10 @@ python3 run-ddsim.py MQTBench/ghz_indep_qiskit_050.qasm
 ## How to Use `run-mqt-bench.py`
 
 The `run-mqt-bench.py` script is used for running 
+
+```
+python3 run-mqt-ddsim.py list="all-test.test"
+```
 
 ## Advanced Usage
 
@@ -49,9 +64,6 @@ The directory `tools` contains addtional scripts were be used along with the `ru
 
 1. `run-mqt-ddsim.py`
 
-```
-python3 run-mqt-ddsim.py list="all-test.test"
-```
 
 2. `install-required-packages.sh`
 
