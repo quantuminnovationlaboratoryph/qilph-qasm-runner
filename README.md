@@ -1,12 +1,20 @@
-# QASM Runner
+# QASM Runner and MQT Bench Runner
 
-The QASM runner script, `run-qasm.py`, takes a quantum circuit in the QASM file format as input and simulates it using any of the following simulators:
-- Qiskit Aer
+The QASM runner, `run-qasm.py`, takes a quantum circuit in the QASM format as input and simulates the circuit (while measuring the memory consumption and run time) using any of the following backend simulators:
+- Qiskit Aer3yy
+- MQT DDSim
+- ProjectQ
+
+The MQT Bench runner, `run-mqt-bench.py`, can take a list of test circuits from the MQT Bench set and simulate each quantum circuit in the list by using the QASM runner `run-qasm.py` script. The `run-mqt-bench.py` script was created specifically to perform benchmarking of the simulators:
+- Qiskit Aer3yy
 - MQT DDSim
 - ProjectQ
 
 
+
 ## Prerequisites 
+
+To run the `run-qasm.py` and `run-mqt-bench.py` scripts, you need to install the scripts required Python package dependencies. We suggest you install these dependencies inside a separate environment like a Python virtual environment or a Conda environment.
 
 ### Required Packages
 
@@ -22,9 +30,7 @@ The QASM runner script, `run-qasm.py`, takes a quantum circuit in the QASM file 
 1. `quimb`
 1. `sparse`
 
-
 ### Install Required Packages
-
 
 To install all required packages, use the following command:
 ```
