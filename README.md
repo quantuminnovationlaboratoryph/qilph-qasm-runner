@@ -96,7 +96,7 @@ Command Format:
 python3 run-qasm.py <QASM file> back=<backend>
 ```
 
-If the `back=<backend>` is not used, the `run-qasm.py` script will use the default `dd-qasm` option which is the MQT DDSim `qasm_simulator` backend. 
+If the `back=<backend>` option is not used, the `run-qasm.py` script will use the default `dd-qasm` option which is the MQT DDSim `qasm_simulator` backend. 
 
 Example 1: (explicitly specifying the backend as `dd-qasm`):
 ```
@@ -108,13 +108,21 @@ Example 2: (specifying the backend as `projq-qasm`):
 python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-qasm
 ```
 
-Note that you can put the `back=<backend>` option anywhere after the script name `run-qasm.py`. This means that that the `<QASM file>` option can also be placed anywhere after the script name.
+Note that you can put the `back=<backend>` option anywhere after the script name `run-qasm.py`. This means that the `<QASM file>` option can also be placed anywhere after the script name.
 
 Example 3: (specifying the backend as `aer-state`):
 ```
 python3 run-qasm.py back=aer-state MQTBench/grover-noancilla_indep_qiskit_010.qasm
 ```
 
+Backends:
+- `dd-qasm`
+- `dd-state`
+- `dd-unitary`
+- `aer-qasm`
+- `aer-state`
+- `projq-qasm`
+- `projq-state`
 
 
 ### Instructions Option (`--help`)
