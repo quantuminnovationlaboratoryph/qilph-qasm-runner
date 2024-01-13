@@ -138,8 +138,33 @@ Command Format:
 python3 run-qasm.py <QASM file> back=<backend> mode=<mode>
 ```
 
-Example 1: 
+Example 1: (`sequential` mode for the `dd-unitary` backend): 
+```
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-unitary mode=sequential
+```
 
+Example 2: (`amplitude` mode for the `dd-state-hybrid` backend):
+```
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-state-hybrdi mode=amplitude
+```
+
+List of backends and their possible modes:
+| Backend         | Mode               |
+|-----------------|--------------------|
+| dd-unitary      | sequential         |
+| dd-unitary      | recursive          |
+|-----------------|--------------------|
+| dd-state-hybrid | dd                 |
+| dd-state-hybrid | amplitude          |
+|-----------------|--------------------|
+| dd-qasm-hybrid  | dd                 |
+| dd-qasm-hybrid  | amplitude          |
+|-----------------|--------------------|
+| dd-qasm-path    | sequential         |
+| dd-qasm-path    | pairwise_recursive |
+| dd-qasm-path    | bracket            |
+| dd-qasm-path    | alternating        |
+| dd-qasm-path    | cotengra           |
 
 ### Instructions Option (`--help`)
 
