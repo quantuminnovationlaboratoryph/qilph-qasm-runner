@@ -43,7 +43,7 @@ pip3 install cotengra kahypar memory_profiler mqt.ddsim opt-einsum projectq qisk
 
 ### Basic Usage
 
-As a default, the `run-qasm.py' only needs the QASM file path of the quantum circuit to run the simulation. 
+As a default, the `run-qasm.py` only needs the QASM file path of the quantum circuit to run the simulation. 
 The default simulator backend is MQT DDSim's `qasm_simulator`.
 
 Command Format:
