@@ -149,22 +149,19 @@ python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-stat
 ```
 
 List of backends and their possible modes:
-| Backend         | Mode               |
-|-----------------|--------------------|
-| dd-unitary      | sequential         |
-| dd-unitary      | recursive          |
-|-----------------|--------------------|
-| dd-state-hybrid | dd                 |
-| dd-state-hybrid | amplitude          |
-|-----------------|--------------------|
-| dd-qasm-hybrid  | dd                 |
-| dd-qasm-hybrid  | amplitude          |
-|-----------------|--------------------|
-| dd-qasm-path    | sequential         |
-| dd-qasm-path    | pairwise_recursive |
-| dd-qasm-path    | bracket            |
-| dd-qasm-path    | alternating        |
-| dd-qasm-path    | cotengra           |
+| Backend           | Mode                 |
+|-------------------|----------------------|
+| `dd-unitary`      | `sequential`         |
+| `dd-unitary`      | `recursive`          |
+| `dd-state-hybrid` | `dd`                 |
+| `dd-state-hybrid` | `amplitude`          |
+| `dd-qasm-hybrid`  | `dd`                 |
+| `dd-qasm-hybrid`  | `amplitude`          |
+| `dd-qasm-path`    | `sequential`         |
+| `dd-qasm-path`    | `pairwise_recursive` |
+| `dd-qasm-path`    | `bracket`            |
+| `dd-qasm-path`    | `alternating`        |
+| `dd-qasm-path`    | `cotengra`           |
 
 ### Instructions Option (`--help`)
 
