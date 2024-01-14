@@ -315,8 +315,24 @@ In the example above, the script will first run the `qaoa_indep_qiskit_` circuit
 
 You can use the list to control the order of simulation. This is particularly useful, for example, if you want to order the simulation in such a way that the circuits that you think can be simulated quickly will be simulated first.
 
+### Running the `run-mqt-bench.py` Script
 
+The following are the 4 options that you can specify when running the script:
+- `list=<list file>` - the file that contains the list of circuits to run
+- `back=<backend>` - the backend that `run-qasm.py` will use
+- `qasm=<directory of QASM files>` - the folder that contains the MQT bench circuits
+- `logs=<directory for logs files>` - the folder that will contain the output logs of the simulation
 
+Command Format:
+```
+python3 run-mqt-bench.py back=<backend> list=<list file> qasm=<mqt bench directory> logs=<logs directory>
+```
+
+The following are the default values of the options if they are not specified in the command:
+- `back=dd-qasm` - Default backend is `dd-qasm`
+- `logs=logs` - Default `logs` directory is `logs`.
+- `list=<default list>` - The default list is the one sample listed above.
+- `qasm=MQTBench` - Default QASM directory is `MQTBench`.
 
 
 
