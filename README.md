@@ -371,7 +371,7 @@ Example:
 cat logs/* | grep SUMMARY > benchmark_result.csv
 ```
 
-An output log produced by `run-qasm.py` has the line that contains the `SUMMARY` tag. There is only one such line in an output log and it contains all relevant benchmarking information. For example. the line `[run-qasm.py:581382] [benc] [SUMMARY   ]     Info , 2024-01-13 15:28:20.622652, dd-qasm, grover-noancilla_in    dep_qiskit_010, 10, 26326, 26029, 251.07421875, 1.0900640487670898` contains the circuit name and details, the backend used, and the memory and time consumed. By outputing all these `SUMMARY` logs in an single `.csv' file, you can open the collated result using any spreadsheet program like MS Excel.
+An output log produced by `run-qasm.py` has the line that contains the `SUMMARY` tag. There is only one such line in an output log and it contains all relevant benchmarking information. For example. the line `[run-qasm.py:581382] [benc] [SUMMARY   ]     Info , 2024-01-13 15:28:20.622652, dd-qasm, grover-noancilla_in    dep_qiskit_010, 10, 26326, 26029, 251.07421875, 1.0900640487670898` contains the circuit name and details, the backend used, and the memory and time consumed. By outputing all these `SUMMARY` logs in an single `.csv` file, you can open the collated result using any spreadsheet program like MS Excel.
 
 
 
