@@ -286,6 +286,9 @@ Sample file that specifies a list of circuits to test:
        groundstate_small_indep_qiskit_ : 4,12,14
 ```
 
+Each line of the file can specify a (sub)list of circuits to run. The first part of the line specifies the circuit prefix name. e.g. `qwalk-noancilla_indep_qiskit_`, `qaoa_indep_qiskit_`, `realamprandom_indep_qiskit_`. The second part specifies the set of qubit counts. e.g. `2,3,4,5`, `2-129`, `3-9+2`. The circuit prefix name (first part) and the qubit counts (second part) are separated by a colon `:`. 
+
+
 
 
 
