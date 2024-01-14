@@ -290,8 +290,10 @@ Each line of the file can specify a (sub)list of circuits to run. The first part
 
 There are 3 ways to specify the qubit counts.
 1. List all qubit counts.  i.e. `2,3,4,5`
-2. Give the minimum and maximum qubit counts. i.e. '2-129' is equivalent to  `2,3,4,5,...,128,129`
+2. Give the minimum and maximum qubit counts. i.e. `2-129` is equivalent to  `2,3,4,5,...,128,129`
 3. Give the min and max qubit counts plus increment value i.e. `3-9+2` is equivalent to `3,5,7,9`
+
+You can use a combination of these 3 ways to specify qubit counts. For example, `2,3,4,10-20,50-60+2,90-120+5` is equivalent to `2,3,4,10,11,12,...,20,50,52,54,...,60,90,95,100,105,110,115,120`.
 
 
 
