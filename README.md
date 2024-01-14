@@ -205,20 +205,20 @@ In the sample logs above, you can see log labels like `[RESU]`, `[benc]`, `[info
 Log Categories/Number:
 | Log No. | Log No. (Binary) | Description        |
 |---------|------------------|--------------------|
-| 1       | 0000001          | Prints [benc] logs |
-| 2       | 0000010          | Prints [err ] logs |
-| 4       | 0000100          | Prints [info] logs |
+| 1       | 0000001          | Prints `[benc]` logs |
+| 2       | 0000010          | Prints `[err ]` logs |
+| 4       | 0000100          | Prints `[info]` logs |
 | 8       | 0001000          | Prints banner logs |
-| 16      | 0010000          | Prints [RESU] logs |
-| 32      | 0100000          | Prints [visu] logs |
-| 64      | 1000000          | Prints [xtra] logs |
+| 16      | 0010000          | Prints `[RESU]` logs |
+| 32      | 0100000          | Prints `[visu]` logs |
+| 64      | 1000000          | Prints `[xtra]` logs |
 
 The default log number is 31 = 1 + 2 + 4 + 8 + 16 which means the follow log categories will be shown:
-- 1  (00000001) - [benc] logs
-- 2  (00000010) - [err ] logs
-- 4  (00000100) - [info] logs
+- 1  (00000001) - `[benc]` logs
+- 2  (00000010) - `[err ]` logs
+- 4  (00000100) - `[info]` logs
 - 8  (00001000) - banner logs
-- 16 (00010000) - [RESU] logs
+- 16 (00010000) - `[RESU]` logs
 
 If you want to add the `[visu]` logs (log no = 32) to the default log number 31, simply add 32 and 31 and use the log number 63 = 32 + 31. The `[visu]` log shows the visual representation of the circuit being simulated so adding 32 (`[visu]` log number) to the default 31 log number will include the visual circuit to the logs.
 
