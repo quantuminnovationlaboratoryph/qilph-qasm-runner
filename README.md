@@ -295,11 +295,23 @@ There are 3 ways to specify the qubit counts.
 
 You can use a combination of these 3 ways to specify qubit counts. For example, `2,3,4,10-20,50-60+2,90-120+5` is equivalent to `2,3,4,10,11,12,...,20,50,52,54,...,60,90,95,100,105,110,115,120`.
 
-*Example:* The line `qwalk-v-chain_indep_qiskit_ : 3-9+2` means the following QASM files will be simulated
+*Example: 1* The line `qwalk-v-chain_indep_qiskit_ : 3-9+2` means the following QASM files will be simulated
 - `qwalk-v-chain_indep_qiskit_003.qasm`
 - `qwalk-v-chain_indep_qiskit_005.qasm`
 - `qwalk-v-chain_indep_qiskit_007.qasm`
 - `qwalk-v-chain_indep_qiskit_009.qasm`
+
+Note that script will follow the order in which you listed the lines. For example, if you listed the line `qaoa_indep_qiskit_ : 3-15` before `ghz_indep_qiskit_ : 2-129`, then all `qaoa_indep_qiskit_` circuits will be simulated first before any `ghz_indep_qiskit_` circuits. But you can have multiple lines with the same circuit prefix name so you can control the order of execution.
+
+*Example 2:*
+```
+qaoa_indep_qiskit_ : 3-10
+ ghz_indep_qiskit_ : 2-50 
+qaoa_indep_qiskit_ : 11-15
+ ghz_indep_qiskit_ : 51-129 
+```
+
+In the example above, the script will first run the `qaoa_indep_qiskit_` circuits with qubit count 3-10 then the `ghz_indep_qiskit_` with qubit count 2-50. The script will then return simulating `qaoa_indep_qiskit_` circuits with qubit count 11-15 followed by the simulation of `ghz_indep_qiskit_` circuits with qubit count 51-129. 
 
 
 
