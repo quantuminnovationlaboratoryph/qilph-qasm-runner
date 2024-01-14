@@ -311,7 +311,9 @@ qaoa_indep_qiskit_ : 11-15
  ghz_indep_qiskit_ : 51-129 
 ```
 
-In the example above, the script will first run the `qaoa_indep_qiskit_` circuits with qubit count 3-10 then the `ghz_indep_qiskit_` with qubit count 2-50. The script will then return simulating `qaoa_indep_qiskit_` circuits with qubit count 11-15 followed by the simulation of `ghz_indep_qiskit_` circuits with qubit count 51-129. 
+In the example above, the script will first run the `qaoa_indep_qiskit_` circuits with qubit count `3-10` then the `ghz_indep_qiskit_` circuits with qubit count `2-50`. The script will then return simulating `qaoa_indep_qiskit_` circuits with qubit count `11-15` followed by the simulation of `ghz_indep_qiskit_` circuits with qubit count `51-129`. 
+
+You can use the list to control the order of simulation. This is particularly useful you want to order the simulation in such a way that the circuits that you think can be simulated quickly will be simulated first.
 
 
 
