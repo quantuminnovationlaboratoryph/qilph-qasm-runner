@@ -286,7 +286,12 @@ Sample file that specifies a list of circuits to test:
        groundstate_small_indep_qiskit_ : 4,12,14
 ```
 
-Each line of the file can specify a (sub)list of circuits to run. The first part of the line specifies the circuit prefix name. e.g. `qwalk-noancilla_indep_qiskit_`, `qaoa_indep_qiskit_`, `realamprandom_indep_qiskit_`. The second part specifies the set of qubit counts. e.g. `2,3,4,5`, `2-129`, `3-9+2`. The circuit prefix name (first part) and the qubit counts (second part) are separated by a colon `:`. 
+Each line of the file can specify a (sub)list of circuits to run. The first part of the line specifies the circuit prefix name. e.g. `qwalk-noancilla_indep_qiskit_`, `qaoa_indep_qiskit_`, `realamprandom_indep_qiskit_`. The second part specifies the set of qubit counts. e.g. `2,3,4,5`, `2-129`, `3-9+2`. The circuit prefix name (first part) and the qubit counts (second part) are separated by a colon `:`. The line means you want to run circuits of the type specified by the prefix name (first part) and only the circuits of certain qubit counts specified by the set of qubit counts (second part).
+
+There are 3 ways to specify the qubit counts.
+1. List all qubit counts.  i.e. `2,3,4,5`
+2. Give the minimum and maximum qubit counts. i.e. '2-129' is equivalent to  `2,3,4,5,...,128,129`
+3. Give the min and max qubit counts plus increment value i.e. `3-9+2` is equivalent to `3,5,7,9`
 
 
 
