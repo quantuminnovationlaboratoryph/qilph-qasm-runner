@@ -343,8 +343,8 @@ The `misc` and `tools` directories contain some helpful script and files that yo
 - The `mqt-bench-sample.list` file (in `misc`)  is a list file that list a small set of test circuits from th `MQTBench.zip`. This list file can be useful when you are initially testing the `run-mqt-bench.py`. When you use this list to run a sample benchmarking, all simulations should be done within minutes.
 - The `test-circuits` directory in (in `misc`) contains QASM circuits that are helpful for debugging. It contains small circuits that test the functionality of different valid QASM gates.
 - The `install-required-packages.sh` script (in `tools) can be used to install all Python packages dependencies needed by `run-qasm.py`.
-- The `projectq-basic.py` (in `tools) is a script that shows the basics of ProjectQ.
-- The `qiskit-basic.py` (in `tools) is script that shows the basics of Qiskit.
+- The `projectq-basic.py` (in `tools`) is a script that shows the basics of ProjectQ.
+- The `qiskit-basic.py` (in `tools`) is script that shows the basics of Qiskit.
 
 
 
