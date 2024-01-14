@@ -295,6 +295,12 @@ There are 3 ways to specify the qubit counts.
 
 You can use a combination of these 3 ways to specify qubit counts. For example, `2,3,4,10-20,50-60+2,90-120+5` is equivalent to `2,3,4,10,11,12,...,20,50,52,54,...,60,90,95,100,105,110,115,120`.
 
+*Example:* The line `qwalk-v-chain_indep_qiskit_ : 3-9+2` means the following QASM files will be simulated
+- `qwalk-v-chain_indep_qiskit_003.qasm`
+- `qwalk-v-chain_indep_qiskit_005.qasm`
+- `qwalk-v-chain_indep_qiskit_007.qasm`
+- `qwalk-v-chain_indep_qiskit_009.qasm`
+
 
 
 
