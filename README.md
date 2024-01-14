@@ -328,6 +328,8 @@ Command Format:
 python3 run-mqt-bench.py back=<backend> list=<list file> qasm=<mqt bench directory> logs=<logs directory>
 ```
 
+When running the `run-mqt-bench.py` make sure that the `run-qasm.py` script is in the same directory.
+
 The following are the default values of the options if they are not specified in the command:
 - `back=dd-qasm` - Default backend is `dd-qasm`
 - `logs=logs` - Default `logs` directory is `logs`.
@@ -335,19 +337,41 @@ The following are the default values of the options if they are not specified in
 - `qasm=MQTBench` - Default QASM directory is `MQTBench`.
 
 
+Example 1: (uses all default values, it assumes `MQTBench` directory exists with the QASM files):
+```
+python3 run-mqt-bench.py
+```
+
+Example 2: (aer-):
+```
+python3 run-mqt-bench.py
+```
+
 ## Additional Information
 
-The `misc` and `tools` directories contain some helpful script and files that you can use when benchmarking.
+1. Note: The `misc` and `tools` directories contain some helpful script and files that you can use when benchmarking.
 - The `MQTBench.zip` file (in `misc`) is a zip file containing the QASM files of the MQT Bench test set.
 - The `mqt-bench-all.list` file (in `misc`) is a list file that can be used by the `run-mqt-bench.py` script. It list all test circuits from the `MQTBench.zip`.
 - The `mqt-bench-sample.list` file (in `misc`)  is a list file that list a small set of test circuits from th `MQTBench.zip`. This list file can be useful when you are initially testing the `run-mqt-bench.py`. When you use this list to run a sample benchmarking, all simulations should be done within minutes.
 - The `test-circuits` directory in (in `misc`) contains QASM circuits that are helpful for debugging. It contains small circuits that test the functionality of different valid QASM gates.
 - The `install-required-packages.sh` script (in `tools) can be used to install all Python packages dependencies needed by `run-qasm.py`.
+- The `test-run-mqt-bench.sh` (in `tools`) is a script that is used for testing if the `run-mqt-bench.py` works. It will run the default list of circuits three times using the `run-mqt-bench.py` but the following different backends: `dd-qasm`, `aer-qasm`, and `projq-qasm`.
 - The `projectq-basic.py` (in `tools`) is a script that shows the basics of ProjectQ.
 - The `qiskit-basic.py` (in `tools`) is script that shows the basics of Qiskit.
 
+2. Tip: The output of the `run-mqt-bench.py` is a set of logs produced by the `run-qasm.py` simulation. To collate the benchmarking results from these logs, you can use the `cat` command to output all contents of the logs and use `grep` to filter out only the lines that summarizes the benchmark results, then save the resulting lines in a CSV (.csv) file.
 
+Command Format:
+```
+cat <logs directory>/* | grep SUMMARY > <benchmark_result>.csv
+```
 
+Example:
+```
+cat logs/* | grep SUMMARY > benchmark_result.csv
+```
+
+An output log produced by `run-qasm.py` has the line that contains the `SUMMARY` tag. There is only one such line in an output log and it contains all relevant benchmarking information. For example. the line `[run-qasm.py:581382] [benc] [SUMMARY   ]     Info , 2024-01-13 15:28:20.622652, dd-qasm, grover-noancilla_in    dep_qiskit_010, 10, 26326, 26029, 251.07421875, 1.0900640487670898` contains the circuit name and details, the backend used, and the memory and time consumed.
 
 
 

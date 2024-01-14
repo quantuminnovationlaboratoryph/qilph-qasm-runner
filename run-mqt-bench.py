@@ -97,7 +97,7 @@ if (os.path.exists(gLogsDirectory) == False):
 
 
 if (os.path.exists(gQasmDirectory) == False):
-  print("The Qasm/MQTBench directory \"" + gLogsDirectory + "\" does not exists.")
+  print("The Qasm/MQTBench directory \"" + gQasmDirectory + "\" does not exists.")
   exit()
 
 
