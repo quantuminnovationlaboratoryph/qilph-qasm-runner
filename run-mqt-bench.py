@@ -21,7 +21,25 @@ from datetime import datetime
 #                   DEFAULTS                     #
 #================================================#
 
-gTestSetString = '''qaoa_indep_qiskit_ : 3-15
+gTestSetString = '''qaoa_indep_qiskit_ : 3-5
+                     vqe_indep_qiskit_ : 3-5
+           portfolioqaoa_indep_qiskit_ : 3-5
+            portfoliovqe_indep_qiskit_ : 3-5
+        grover-noancilla_indep_qiskit_ : 2-5
+          grover-v-chain_indep_qiskit_ : 2,3,4,5-9+2
+         qwalk-noancilla_indep_qiskit_ : 3-5
+           qwalk-v-chain_indep_qiskit_ : 3-11+2
+                     ghz_indep_qiskit_ : 2-5
+              graphstate_indep_qiskit_ : 3-5
+                     qft_indep_qiskit_ : 2-5
+                      dj_indep_qiskit_ : 2-5
+                qpeexact_indep_qiskit_ : 2-5
+              qpeinexact_indep_qiskit_ : 2-5
+                      ae_indep_qiskit_ : 2-5
+           realamprandom_indep_qiskit_ : 2-5
+       groundstate_small_indep_qiskit_ : 4,12,14'''
+
+gTestSetString2 ='''qaoa_indep_qiskit_ : 3-15
                      vqe_indep_qiskit_ : 3-19
            portfolioqaoa_indep_qiskit_ : 3-13
             portfoliovqe_indep_qiskit_ : 3-22
@@ -72,8 +90,20 @@ for parameter in sys.argv:
 #             PARAMETER CHECKING                 #
 #================================================#
 
-print("Does the director exists?", os.path.exists(gQasmDirectory))
-print("Does the director exists?", os.path.exists(gLogsDirectory))
+if (os.path.exists(gLogsDirectory) == False):
+  print("The logs directory \"" + gLogsDirectory + "\" does not exists.")
+  print("Creating logs directory \"" + gLogsDirectory + "\" now.")
+  os.mkdir(gLogsDirectory, mode = 0o777)
+
+
+if (os.path.exists(gQasmDirectory) == False):
+  print("The Qasm/MQTBench directory \"" + gLogsDirectory + "\" does not exists.")
+  exit()
+
+
+if ( os.path.exists(gTestListFilename) == False):
+  print("The test list file \"" + gTestListFilename + "\" does not exists.")
+  print("Using default test list instead.")
 
 #================================================#
 #                GET TEST LIST                   #

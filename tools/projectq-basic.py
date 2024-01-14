@@ -113,24 +113,24 @@ def Example_004(index):
 
 
 #==================================================================================================#
-# Example  5: Simulator's random seed (rnd_seed)
+# Example  5: Getting the entire state vector using cheat() function.
 #==================================================================================================#
 
 def Example_005(index):
-  sim  = Simulator()              # 'sim' rnd_seed is actually randomly generated.
-  eng  = MainEngine(backend=sim)  # 'eng' will use 'sim' with random seed.
-  qreg = eng.allocate_qureg(5)    # Allocate 5-qubit register to 'eng'.
-  All(H)       | qreg             # Apply the 'H' gate to all qubits in 'qreg'.
-  eng.flush()                     # Flush.
-  stateVector = eng.backend.cheat() 
-  All(Measure) | qreg             # Apply the 'Measure' gate to all qubits in 'qreg'.
-  eng.flush()                     # Flush.
+  sim  = Simulator()                # 'sim' rnd_seed is actually randomly generated.
+  eng  = MainEngine(backend=sim)    # 'eng' will use 'sim' with random seed.
+  qreg = eng.allocate_qureg(3)      # Allocate 3-qubit register to 'eng'.
+  All(H)       | qreg               # Apply the 'H' gate to all qubits in 'qreg'.
+  eng.flush()                       # Flush.
+  stateVector = eng.backend.cheat() # Get the current state vector using 'eng' backend cheat() func.
+  All(Measure) | qreg               # Apply the 'Measure' gate to all qubits in 'qreg'.
+  eng.flush()                       # Flush.
 
   print("")
   print("==================================================")
   print("Example 5, Run " + str(index))
   print("==================================================")
-  print(stateVector)
+  print("State Vector : " + str(stateVector[1]))
   print(str(bin(10)))
 
 # End of Example_005
@@ -140,8 +140,9 @@ def Example_005(index):
 # Run examples here
 #==================================================================================================#
 
-# Comment out the line of the example to not run it.
-# Or, set the 're
+# Comment out the line of the example to not run the example function.
+# Or, set the second parameter (after the example function) to set the number of times to run the
+# example.
 
 examplesToRun = [
 #[Example_xyz, n], 

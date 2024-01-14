@@ -154,12 +154,12 @@ def PrintHelp():
   print("LOG LEVEL : logs=<log level>")
   print("----------------------------\n")
   print("Specifies which log levels to print out.\n")
-  print(" 1 (000001) : Prints the [benchmark] level logs.")
-  print(" 2 (000010) : Prints the [error    ] level logs.")
-  print(" 4 (000100) : Prints the [info     ] level logs.")
-  print(" 8 (001000) : Prints the [banner   ] level logs.")
-  print("16 (010000) : Prints the [result   ] level logs.")
-  print("32 (100000) : Prints the [visual   ] level logs.")
+  print(" 1 (000001) : Prints the [benc] level logs.")
+  print(" 2 (000010) : Prints the [err ] level logs.")
+  print(" 4 (000100) : Prints the [info] level logs.")
+  print(" 8 (001000) : Prints the [banner] level logs.")
+  print("16 (010000) : Prints the [resu] level logs.")
+  print("32 (100000) : Prints the [visu] level logs.")
   print("15 (001111) : Prints the [banner and lower] level logs.")
   print("31 (011111) : Prints the [result and lower] level logs.")
   print("63 (111111) : Prints the [all      ] level logs.\n")
@@ -264,7 +264,7 @@ if ( len(sys.argv) < 2 ):
   printLog(logStartBanner,
            logLvlBanner, 
            gLogLevel)
-  printLog(logRunString + "No provided QSAM file name.", 
+  printLog(logRunString + "[err ] [preprocess] No provided QASM file name.", 
            logLvlError,
            gLogLevel)
   printLog(logEndBanner,
