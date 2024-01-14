@@ -233,7 +233,7 @@ The default log number is 31 = 1 + 2 + 4 + 8 + 16 which means the follow log cat
 +---------------------------+
 ```
 
-subtract the banner log number 8 to the default log number 31. i.e. Log number without the banner 23 = 31 - 8.
+subtract the banner log number 8 from the default log number 31. i.e. Log number without the banner 23 = 31 - 8.
 
 ### Instructions Option (`--help`)
 
@@ -247,9 +247,21 @@ python3 run-qasm.py --help
 
 ## How to Use `run-mqt-bench.py`
 
-The `run-mqt-bench.py` script is used for running 
+The `run-mqt-bench.py` script is used for simulating the MQT Bench set of quantum circuits. It uses the `run-qasm.py` to run the simulation. The `run-mqt-bench.py` takes a text file that specifies the list of circuits to run.
 
+### List of Circuits: File Format
+
+First, we look at the convention used for naming the QASM circuit files.
+
+MQT Bench circuit naming convention:
 ```
-python3 run-mqt-ddsim.py list="all-test.test"
+<circuit_name_prefix>_<3-digit qubit count>.qasm
 ```
+
+Examples of MQT Bench circuit names:
+- `qaoa_indep_qiskit_003.qasm`
+- `grover-noancilla_indep_qiskit_010.qasm`
+- `dj_indep_qiskit_101.qasm`
+- `qft_indep_qiskit_005.qasm`
+- `realamprandom_indep_qiskit_020.qasm`
 
