@@ -220,8 +220,20 @@ The default log number is 31 = 1 + 2 + 4 + 8 + 16 which means the follow log cat
 - 8  (00001000) - banner logs
 - 16 (00010000) - `[RESU]` logs
 
-If you want to add the `[visu]` logs (log no = 32) to the default log number 31, simply add 32 and 31 and use the log number 63 = 32 + 31. The `[visu]` log shows the visual representation of the circuit being simulated so adding 32 (`[visu]` log number) to the default 31 log number will include the visual circuit to the logs.
+*Example 1:* If you want to add the `[visu]` logs (log no = 32) to the default log number 31, simply add 32 and 31 and use the log number 63 = 32 + 31. The `[visu]` log shows the visual representation of the circuit being simulated so adding 32 (`[visu]` log number) to the default 31 log number will include the visual circuit to the logs.
 
+*Example 2:* If you want to remove the following banner logs from the default set of logs,
+```
++---------------------------+                                                                        
+| 581382 | QASM Run | START |                                                                        
++---------------------------+
+...
++---------------------------+                                                                        
+| 581382 | QASM Run | END |                                                                        
++---------------------------+
+```
+
+subtract the banner log number 8 to the default log number 31. i.e. Log number without the banner 23 = 31 - 8.
 
 ### Instructions Option (`--help`)
 
