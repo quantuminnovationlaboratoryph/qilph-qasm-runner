@@ -178,9 +178,23 @@ Example: (simulation uses `dd-qasm` backend with 1024 shots):
 python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-qasm shot=1024
 ```
 
-### Log Option (`logs=<log no.>`)
 
 ### Testing Option (`test=<test type>`)
+
+By default, the memory usage of the simulation is being measured. This testing option can be explicitly specified using the option `test=memo`. To turn off memory measurement during simulation, use the option `test=run`.
+
+Example 1: (explicitly specifying to measure memory usage [default]):
+```
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm test=memo
+``` 
+
+Example 2: (specifying to not measure memory usage):
+```
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm test=run
+``` 
+
+### Log Option (`logs=<log no.>`)
+
 
 ### Instructions Option (`--help`)
 
