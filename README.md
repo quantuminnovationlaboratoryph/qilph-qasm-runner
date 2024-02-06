@@ -353,9 +353,9 @@ python3 run-mqt-bench.py back=aer-qasm
 - The `MQTBench.zip` file (in `misc`) is a zip file containing the QASM files of the MQT Bench test set.
 - The `mqt-bench-all.list` file (in `misc`) is a list file that can be used by the `run-mqt-bench.py` script. It list all test circuits from the `MQTBench.zip`.
 - The `mqt-bench-sample.list` file (in `misc`)  is a list file that list a small set of test circuits from th `MQTBench.zip`. This list file can be useful when you are initially testing the `run-mqt-bench.py`. When you use this list to run a sample benchmarking, all simulations should be done within minutes.
-- The `test-circuits` directory in (in `misc`) contains QASM circuits that are helpful for debugging. It contains small circuits that test the functionality of different valid QASM gates.
-- The `install-required-packages.sh` script (in `tools) can be used to install all Python packages dependencies needed by `run-qasm.py`.
-- The `test-run-mqt-bench.sh` (in `tools`) is a script that is used for testing if the `run-mqt-bench.py` works. It will run the default list of circuits three times using the `run-mqt-bench.py` but the following different backends: `dd-qasm`, `aer-qasm`, and `projq-qasm`.
+- The `test-circuits` directory (in `misc`) contains QASM circuits that are helpful for debugging. It contains small circuits that test the functionality of different valid QASM gates.
+- The `install-required-packages.sh` script (in `tools`) can be used to install all Python packages dependencies needed by `run-qasm.py`.
+- The `test-run-mqt-bench.sh` (in `tools`) is a script that is used for testing if the `run-mqt-bench.py` works. It will run the default list of circuits three times using the `run-mqt-bench.py` but will use the following different backends: `dd-qasm`, `aer-qasm`, and `projq-qasm`.
 - The `projectq-basic.py` (in `tools`) is a script that shows the basics of ProjectQ.
 - The `qiskit-basic.py` (in `tools`) is script that shows the basics of Qiskit.
 
