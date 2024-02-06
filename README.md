@@ -342,7 +342,7 @@ Example 1: (uses all default values, it assumes `MQTBench` directory exists with
 python3 run-mqt-bench.py
 ```
 
-Example 2: (uses backedn `aer-qasm` with other options having the default values):
+Example 2: (uses backend `aer-qasm` with other options having the default values):
 ```
 python3 run-mqt-bench.py back=aer-qasm
 ```
