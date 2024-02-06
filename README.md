@@ -105,7 +105,7 @@ python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-qasm
 
 Example 2: (specifying the backend as `projq-qasm`):
 ```
-python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=dd-qasm
+python3 run-qasm.py MQTBench/grover-noancilla_indep_qiskit_010.qasm back=projq-qasm
 ```
 
 Note that you can put the `back=<backend>` option anywhere after the script name `run-qasm.py`. This means that the `<QASM file>` option can also be placed anywhere after the script name.
